@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "json-server --watch db.json --port 9000",
+    "parse-data": ". ./scripts/parseData.sh"
   },
   "author": "",
   "license": "ISC",
