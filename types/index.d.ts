@@ -1,9 +1,7 @@
-
 declare module App {
-
-  interface Item {
-    name: string;
-    value: number;
+  interface Point {
+    x: number;
+    y: number;
+    p: number;
   }
-
 }
