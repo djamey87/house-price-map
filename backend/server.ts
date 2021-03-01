@@ -30,14 +30,12 @@ const getPriceBoundaries = (pointData: Point[]): { min: number; max: number } =>
   });
 
   server.use(apiRouter);
-  (apiRouter as any).render = (_req: any, res: any) => {
+  (apiRouter as any).render = (req: any, res: any) => {
     const priceBoundaries = getPriceBoundaries(res.locals.data);
     return res.jsonp({
-      data: {
-        minValue: priceBoundaries.min,
-        maxValue: priceBoundaries.max,
-        points: res.locals.data,
-      },
+      minValue: priceBoundaries.min,
+      maxValue: priceBoundaries.max,
+      points: res.locals.data,
     });
   };
   server.listen(9000, () => {
