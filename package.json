@@ -36,11 +36,12 @@
     "start": "concurrently \"yarn start:backend\" \"yarn start:frontend\"",
     "start:backend": "cd backend && yarn start",
     "start:frontend": "cd frontend && yarn start",
-    "lint": "yarn lint:frontend",
+    "lint": "yarn lint:frontend && yarn lint:backend",
     "lint:frontend": "cd frontend && yarn lint",
-    "test": "yarn test:frontend",
+    "lint:backend": "cd backend && yarn lint",
+    "test": "yarn test:frontend && test:backend",
     "test:frontend": "cd frontend && yarn test",
-    "serve": "cd backend && node build/server.js"
+    "test:backend": "cd backend && yarn test"
   },
   "description": "[![Build Status](https://travis-ci.com/Fabianopb/express-react-ts-ci.svg?branch=master)](https://travis-ci.com/Fabianopb/express-react-ts-ci)",
   "main": "index.js",
