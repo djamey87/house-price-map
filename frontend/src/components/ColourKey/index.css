@@ -1,0 +1,14 @@
+.key-wrapper {
+    text-align: left;
+    display: inline-block;
+    margin-right: 20px;
+}
+.key-wrapper > div{
+    display: inline-block;
+}
+.key-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
